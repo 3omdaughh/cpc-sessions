@@ -1,0 +1,160 @@
+\documentclass[12pt, letterpaper]{report}
+\usepackage{mysty}
+\pagestyle{fancy}
+
+\usetikzlibrary{arrows.meta}
+\fancyhead[L]{}
+\setlength{\TPHorizModule}{\paperwidth}
+\setlength{\TPVertModule}{\paperheight}
+
+\title{Session 1: Core Containers and Basics \\ }
+\author{Mohamed Emad Mahrous}
+\date{2nd of November, 2024.}
+
+\makeatletter
+\def\maketitle{%
+  \begin{center}
+    {\Huge\bfseries \@title\par}
+    \vskip 1em
+    {\large \@author\par}
+    \vskip 1em
+    {\large \@date\par}
+  \end{center}
+}
+\makeatother
+
+\begin{document}
+
+\maketitle
+
+\section*{Introduction to STL}
+The Standard Template Library (STL) is a powerful and essential component of the C++ Standard Library that provides a set of common data structures and algorithms. It includes several key features that make it particularly significant in both competitive programming and software development:
+
+\begin{enumerate}
+    \item \textbf{Key Components of STL}
+    \begin{itemize}
+    	\item \textbf{Containers:} These are data structures that store collections of objects. Common containers include:
+		\begin{itemize}			
+\item Vector: A dynamic array that can resize itself.
+\item List: A doubly linked list.
+\item Deque: A double-ended queue.
+\item Set: A collection of unique elements.
+\item Map: A collection of key-value pairs, where keys are unique.
+    		\end{itemize}
+	\item \textbf{Algorithms:} STL provides a wide array of algorithms that operate on containers, such as:
+		\begin{itemize}			
+\item Sorting (e.g., sort, stable\_sort)
+\item Searching (e.g., binary\_search, find)
+\item Modifying (e.g., reverse, shuffle)
+\item Numeric (e.g., accumulate, inner\_product)
+    		\end{itemize}
+	\item \textbf{Iterators:} These are objects that allow traversal of the elements in a container, similar to pointers. STL provides different types of iterators, such as:
+		\begin{itemize}			
+\item Input Iterators: For reading data.
+\item Output Iterators: For writing data.
+\item Forward Iterators: For traversing in one direction.
+\item Bidirectional Iterators: For traversing in both directions.
+\item Random Access Iterators: For accessing elements directly (like pointers).
+    		\end{itemize}
+	
+	
+	\item \textbf{Significance in Competitive Programming}
+	\begin{itemize}
+		\item \textbf{Efficiency:} STL's algorithms are often optimized for performance. Using these algorithms can save time in implementation and can lead to more efficient solutions.
+
+    		\item \textbf{Time-Saving:} STL provides ready-to-use data structures and algorithms, allowing competitors to focus on problem-solving rather than on writing and debugging complex data structures from scratch.
+
+    		\item \textbf{Versatility:} The range of data structures and algorithms available in STL makes it easier to handle various types of problems, from simple to complex.
+
+    		\item \textbf{Debugging:} STL components are well-tested and can reduce the chances of bugs, which is crucial during time-constrained competitions.
+    	\end{itemize}
+\end{itemize}
+\newpage
+\item \textbf{Sequential Containers}
+	\begin{itemize}
+		\item A vector in C++ is a dynamic array that can grow and shrink in size. It is part of the Standard Template Library (STL) and provides many useful functions.
+	\end{itemize}
+
+\textbf{Key Functions}
+
+Here are some of the most commonly used functions with vectors:
+
+\begin{itemize}
+    \item \textbf{push\_back(value)}: Adds an element to the end of the vector.
+    \item \textbf{pop\_back()}: Removes the last element from the vector.
+    \item \textbf{size()}: Returns the number of elements in the vector.
+    \item \textbf{back()}: Returns the last element in the array
+\end{itemize}
+\textbf{Common Scenarios}
+
+Vectors can be used in various scenarios, including:
+
+\begin{itemize}
+    \item Storing a list of items, such as student grades or names.
+    \item Implementing data structures like stacks and queues.
+    \item Dynamic arrays where the size needs to change based on user input.
+\end{itemize}
+
+\item \textbf{Associative Containers}
+	\begin{itemize}
+		\item A set in C++ is a collection of unique elements, which is part of the Standard Template Library (STL). It automatically manages duplicates and is typically implemented as a balanced binary search tree.
+	\end{itemize}
+
+\textbf{Key Functions}
+
+Here are some essential functions associated with sets:
+
+\begin{itemize}
+    \item \textbf{insert(value)}: Adds a new element to the set.
+    \item \textbf{find(value)}: Searches for an element in the set and returns an iterator to it, or the end iterator if not found.
+    \item \textbf{count(value)}: Returns the number of occurrences of an element in the set (should be 0 or 1 for a set).
+    \item \textbf{erase(value)}: Removes an element from the set.
+\end{itemize}
+
+
+\textbf{Common Scenarios}
+\begin{itemize}
+\item \textbf{Unique Item Storage:} Sets are ideal for storing collections of unique items, such as usernames, email addresses, or product IDs. This ensures that no duplicates are allowed, which is useful for validating input data or maintaining distinct lists.
+
+\item \textbf{Membership Testing:} Sets provide efficient membership testing. When you need to frequently check whether an item exists in a collection (like checking if a user is on a blacklist), sets can perform this operation in average O(1)O(1) time complexity.
+
+\item \textbf{Set Operations:} Sets are useful for performing mathematical set operations, such as unions, intersections, and differences. For example, if you have two sets of data and need to find common elements (intersection) or combine them without duplicates (union), sets provide built-in functionalities for these operations.
+
+\item \textbf{Removing Duplicates:} When processing a list of items, sets can automatically remove duplicates. For example, if you have a list of survey responses and want to identify unique answers, inserting them into a set will filter out duplicates.
+
+\item \textbf{Collecting Results:} In algorithms that need to gather results from different sources, like finding unique elements across multiple datasets, using a set can simplify the process of aggregating and ensuring that only unique results are kept.
+
+\item \textbf{Dynamic Programming:} Sets can be helpful in dynamic programming scenarios where the solution to a problem depends on unique combinations of items or states, such as finding unique sums or combinations of values.
+    \end{itemize}
+\textbf{The second section}
+\begin{itemize}
+	\item A map in C++ is a collection of key-value pairs, where each key is unique. It is part of the Standard Template Library (STL) and allows for efficient retrieval and modification of values based on their keys.
+\end{itemize}
+
+ 
+\textbf{Key Operations}
+
+Here are some essential operations you can perform on maps:
+
+\begin{itemize}
+    \item \textbf{insert(key, value)}: Adds a new key-value pair to the map.
+    \item \textbf{find(key)}: Searches for a key in the map and returns an iterator to it, or the end iterator if not found.
+    \item \textbf{erase(key)}: Removes the key-value pair from the map.
+\end{itemize}
+
+\textbf{Common Scenarios}
+\begin{itemize}
+
+\item \textbf{Counting Frequencies:} Maps are frequently used to count occurrences of elements in an array or list. For example, you can count how many times each character appears in a string or how many times each number appears in an array. This is often useful in problems requiring frequency analysis.
+
+\item \textbf{Tracking Distinct Elements:} In problems where you need to maintain a count of distinct elements while processing a sequence, maps can help keep track of the number of unique values seen so far, facilitating operations that require uniqueness.
+
+\item \textbf{Mapping Relationships:} For problems that involve relationships or mappings between two sets (like nodes in a graph), maps can store edges or connections, allowing for efficient traversal and lookups during graph algorithms.
+
+\item \textbf{Solving Anagram Problems:} Maps can help determine if two strings are anagrams by counting the frequency of each character in both strings and comparing the results. You can use the character counts as keys and their frequencies as values.
+
+\item \textbf{Dynamic Programming:} Maps are useful in dynamic programming scenarios where you need to store intermediate results keyed by specific states. For example, when solving the Longest Increasing Subsequence problem, a map can help store the lengths of subsequences based on ending values.
+
+\end{itemize}
+\end{enumerate}
+\end{document}
